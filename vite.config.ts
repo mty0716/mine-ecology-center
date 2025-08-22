@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/mine-ecology-center/',
+  base: process.env.NODE_ENV === 'production' ? '/mine-ecology-center/' : '/',
 })
